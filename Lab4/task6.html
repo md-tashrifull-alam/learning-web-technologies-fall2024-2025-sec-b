@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Selection Form</title>
+</head>
+<body>
+    <h2>Select your degrees</h2>
+    <form action="task6_submit.php" method="POST" onsubmit="return validateForm()">
+        <label>Degree: </label><br>
+        <input type="checkbox" name="degree[]" value="SSC"> SSC<br>
+        <input type="checkbox" name="degree[]" value="HSC"> HSC<br>
+        <input type="checkbox" name="degree[]" value="BSc"> BSc<br>
+        <input type="checkbox" name="degree[]" value="MSc"> MSc<br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var selectedDegrees = document.querySelectorAll('input[name="degree[]"]:checked');
+            if (selectedDegrees.length < 2) {
+                alert('Please select at least two degrees.');
+                return false; 
+            }
+            return true; 
+        }
+    </script>
+</body>
+</html>
