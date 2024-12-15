@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    <form action="regchk.php" method="post">
+        <fieldset>
+            <legend>Signup</legend>
+            <table>
+                <tr>
+                    <td>ID:</td>
+                    <td><input type="text" name="userid" placeholder="Enter your ID" required /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" placeholder="Enter your password" required /></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password:</td>
+                    <td><input type="password" name="confirm_password" placeholder="Re-enter your password" required /></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" placeholder="Enter your Name" required /></td>
+                </tr>
+                <tr>
+                    <td>User type:</td>
+                    <td>
+                        <input type="radio" name="user_type" value="user" required> User  
+                        <input type="radio" name="user_type" value="admin" required> Admin 
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Signup" />
+                        <a href="login.html">signin</a>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form> 
+</body>
+</html>
